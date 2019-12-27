@@ -33,14 +33,14 @@ class Nav extends Component {
     render(){
         return(
             <Router>
-                <nav class='name'>
-                    <Link classname="link" to='/'> Home</Link>
+                <nav className='name'>
+                    <Link className="link" to='/'> Home</Link>
                 </nav>
                 <Route
                     exact path='/'
                     render={(props) => <Home {...props} 
                     searchTerm={this.state.searchTerm}
-                    getNews={this.getNews(this.state.searchTerm)}
+                    getNews={this.getNews}
                     onNewsSearch={this.onNewsSearch}
                     news={this.state.news}/>}
                 />

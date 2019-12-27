@@ -1,9 +1,15 @@
 import React from 'react'
+import SearchNews from './SearchNews'
 
-function Home() {
+function Home(props){
+
     return (
         <div>
-            <h1>We are home</h1>
+            <SearchNews
+               searchTerm= {props.searchTerm}
+               getNews={props.getNews}
+               onNewsSearch={props.onNewsSearch}
+            />
         </div>
     )
 }
