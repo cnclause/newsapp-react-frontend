@@ -15,19 +15,22 @@ class Nav extends Component {
     }
 
     onNewsSearch = (event) => {
+        console.log('event', event)
         this.setState({searchTerm: event.target.value})
+
+        this.getNews(this.state.searchTerm)
     }
 
     getNews = (searchTerm) => {
-        fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=fd5ace6ad0b54f9c9dae1cc5004a9fb5`)
+        // searchTerm = this.state.searchTerm
+        // fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=fd5ace6ad0b54f9c9dae1cc5004a9fb5`)
+        fetch(`https://rickandmortyapi.com/api/character/?name=${searchTerm}&status=alive
+            `)
             .then(response => response.json())
             .then(news => {
                 this.setState({ news })
             })
     }
-
-
-
 
 
     render(){

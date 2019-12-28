@@ -1,21 +1,18 @@
 import React from 'react'
-import NewsCard from './NewsCard'
+import NewsCard from './NewsContainer'
 
 function SearchNews(props) {
+    console.log('onnewsearch', props.onNewsSearch)
 
-    const newsCards = props.getNews().map(news => {
-        return <NewsCard key={news.id} news={news} />
-    })
 
     return (
         <div>
-            {newsCards}
             <form>
                 <input
                     placeholder='Search Topic..'
                     type="text"
                     value={props.searchTerm} 
-                    onChange={props.onNewsSearch()}
+                    onChange={props.onNewsSearch}
                 />
             </form> 
         </div>
