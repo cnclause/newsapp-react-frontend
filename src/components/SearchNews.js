@@ -2,8 +2,7 @@ import React from 'react'
 import NewsCard from './NewsContainer'
 
 function SearchNews(props) {
-    console.log('onnewsearch', props.onNewsSearch)
-
+    // console.log('onnewsearch', props.onNewsSearch)
 
     return (
         <div>

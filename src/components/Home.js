@@ -12,7 +12,11 @@ function Home(props){
                onNewsSearch={props.onNewsSearch}
                news={props.news}
             />
-            <NewsContainer news={props.news}/>
+            {
+                props.searchTerm.length > 2
+                ? <NewsContainer news={props.news}/>
+                : null
+            }   
         </div>
     )
 }
