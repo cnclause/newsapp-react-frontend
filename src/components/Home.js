@@ -13,7 +13,7 @@ function Home(props){
                news={props.news}
             />
             {
-                props.searchTerm.length > 2
+                props.news.length > 2
                 ? <NewsContainer news={props.news}/>
                 : null
             }   

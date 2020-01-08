@@ -1,13 +1,14 @@
 import React from 'react'
-import NewsCard from './NewsContainer'
+import '../stylesheets/SearchNews.css'
 
 function SearchNews(props) {
     // console.log('onnewsearch', props.onNewsSearch)
 
     return (
         <div>
-            <form>
+            <form className="news-form">
                 <input
+                    className="input-search"
                     placeholder='Search Topic..'
                     type="text"
                     value={props.searchTerm} 
